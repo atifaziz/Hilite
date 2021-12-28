@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- License
+
+The zlib/libpng License
+Copyright (c) 2006 Atif Aziz, Skybow AG.
+
+This software is provided 'as-is', without any express or implied
+warranty. In no event will the authors be held liable for any damages
+arising from the use of this software.
+
+Permission is granted to anyone to use this software for any purpose,
+including commercial applications, and to alter it and redistribute it
+freely, subject to the following restrictions:
+
+1. The origin of this software must not be misrepresented; you must not
+   claim that you wrote the original software. If you use this software in
+   a product, an acknowledgment in the product documentation would be
+   appreciated but is not required.
+
+2. Altered source versions must be plainly marked as such, and must not be
+   misrepresented as being the original software.
+
+3. This notice may not be removed or altered from any source distribution.
+
+-->
+<configuration>
+    
+    <styles>
+    
+        <style id="comment" foreColor="Green" />
+        <style id="keyword" foreColor="Cyan" />
+        <style id="string" foreColor="Magenta" />
+        <style id="number" foreColor="Magenta" />
+        <style id="preprocessor" foreColor="Gray" />
+        <style id="doc-string" foreColor="Gray" />
+
+        <style id="sql-funcs" foreColor="Magenta" />
+        <style id="sql-string" foreColor="Red" />
+        <style id="sql-comment" foreColor="DarkGray" />
+        <style id="sql-op" foreColor="Yellow" />
+        
+        <style id="xml-attribute" foreColor="Yellow" />
+        <style id="xml-attribute-value" foreColor="Cyan" />
+        <style id="xml-tag" foreColor="Magenta" />
+        <style id="xml-tag-name" foreColor="Magenta" />
+        <style id="xml-comment" foreColor="DarkGray" />
+        <style id="xml-cdata" foreColor="Gray" />
+
+        <style id="batch-op" foreColor="Yellow" />
+        <style id="batch-variable" foreColor="Magenta" />
+
+        <style id="py-special" foreColor="Yellow" />
+        <style id="py-decorator" foreColor="Yellow" />
+               
+    </styles>
+
+    <painters>
+
+        <painter id="JavaScriptPainter" displayName="JavaScript" for="js">
+            <regex pattern="//.*$" options="gm" style="comment" />
+            <regex pattern="/\*[\s\S]*?\*/" options="g" style="comment" />
+            <regex pattern='"(?:[^"\n]|[\\"])*?"' options="g" style="string" />
+            <regex pattern="'(?:[^'\n]|[\\'])*?'" options="g" style="string" />
+            <regex pattern="^\\s*#.*" options="gm" style="preprocessor" />
+            <keywords style="keyword">
+                abstract boolean break byte case catch char class const continue debugger
+                default delete do double else enum export extends false final finally float
+                for function goto if implements import in instanceof int interface long native
+                new null package private protected public return short static super switch
+                synchronized this throw throws transient true try typeof var void volatile while with
+            </keywords>
+        </painter>
+
+        <painter id="CSharpPainter" displayName="C#" for="cs">
+            <regex pattern="//.*$" options="gm" style="comment" />
+            <regex pattern="/\*[\s\S]*?\*/" options="g" style="comment" />
+            <regex pattern='"(?:[^"\n]|[\\"])*?"' options="g" style="string" />
+            <regex pattern="'(?:[^'\n]|[\\'])*?'" options="g" style="string" />
+            <regex pattern="^\\s*#.*" options="gm" style="preprocessor" />
+            <keywords style="keyword">
+                abstract as base bool break byte case catch
+                char checked class const continue decimal default delegate
+                do double else enum event explicit extern false
+                finally fixed float for foreach get goto if
+                implicit in int interface internal is lock long
+                namespace new null object operator out override params
+                partial private protected public readonly ref return sbyte
+                sealed set short sizeof stackalloc static string struct
+                switch this throw true try typeof uint ulong
+                unchecked unsafe ushort using value virtual void volatile
+                where while yield
+            </keywords>
+        </painter>
+
+        <painter id="SqlPainter" displayName="SQL" for="sql">
+            <regex pattern="--(?:.*)$" options="gm" style="sql-comment" />
+            <regex pattern='"(?:\.|[^\""])*?"' options="g" style="sql-string" />
+            <regex pattern="'(?:\.|[^\''])*?'" options="g" style="sql-string" />
+            <keywords style="sql-funcs">
+                abs avg case cast coalesce convert count current_timestamp
+                current_user day isnull left lower month nullif replace right
+                session_user space substring sum system_user upper user year
+            </keywords>
+            <keywords style="sql-op">
+                all and any between cross in join like not null or outer some
+            </keywords>
+            <keywords style="keyword" ignoreCase="true">
+                absolute action add after alter as asc at authorization begin bigint
+                binary bit by cascade char character check checkpoint close collate
+                column commit committed connect connection constraint contains continue
+                create cube current current_date current_time cursor database date
+                deallocate dec decimal declare default delete desc distinct double drop
+                dynamic else end end-exec escape except exec execute false fetch first
+                float for force foreign forward free from full function global goto grant
+                group grouping having hour ignore index inner insensitive insert instead
+                int integer intersect into is isolation key last level load local max min
+                minute modify move name national nchar next no numeric of off on only
+                open option order out output partial password precision prepare primary
+                prior privileges procedure public read real references relative repeatable
+                restrict return returns revoke rollback rollup rows rule schema scroll
+                second section select sequence serializable set size smallint static
+                statistics table temp temporary then time timestamp to top transaction
+                translation trigger true truncate uncommitted union unique update values
+                varchar varying view when where with work
+            </keywords>
+        </painter>
+
+        <painter id="VBPainter" displayName="Visual Basic" for="vb vbs bas frm cls">
+            <regex pattern='"(?:\.|[^""])*"' options="g" style="string" />
+            <regex pattern="'.*$" options="gm" style="comment" />
+            <regex pattern="^\s*#.*" options="gm" style="preprocessor" />
+            <keywords style="keyword" ignoreCase="true">
+                AddHandler AddressOf AndAlso Alias And Ansi As Assembly Auto
+                Boolean ByRef Byte ByVal Call Case Catch CBool CByte CChar CDate
+                CDec CDbl Char CInt Class CLng CObj Const CShort CSng CStr CType
+                Date Decimal Declare Default Delegate Dim DirectCast Do Double Each
+                Else ElseIf End Enum Erase Error Event Exit False Finally For Friend
+                Function Get GetType GoSub GoTo Handles If Implements Imports In
+                Inherits Integer Interface Is Let Lib Like Long Loop Me Mod Module
+                MustInherit MustOverride MyBase MyClass Namespace New Next Not Nothing
+                NotInheritable NotOverridable Object On Option Optional Or OrElse
+                Overloads Overridable Overrides ParamArray Preserve Private Property
+                Protected Public RaiseEvent ReadOnly ReDim REM RemoveHandler Resume
+                Return Select Set Shadows Shared Short Single Static Step Stop String
+                Structure Sub SyncLock Then Throw To True Try TypeOf Unicode Until
+                Variant When While With WithEvents WriteOnly Xor
+            </keywords>
+        </painter>
+        
+        <painter id="XmlPainter" displayName="HTML/XML" for="html htm xml xhtml xslt xsl" type="Hilite.XmlPainter, Hilite" />
+        
+        <painter id="BatchPainter" displayName="Batch" for="bat cmd">
+            <regex pattern="^\s*rem\b.*" options="gmi" style="comment" />
+            <regex pattern="%\w+%" options="g" style="batch-variable" />
+            <keywords style="keyword" ignoreCase="true">
+                assoc at attrib 
+                break 
+                cacls call cd chcp chdir chkdsk chkntfs cls cmd color comp compact convert copy 
+                date del dir diskcomp diskcopy doskey 
+                echo endlocal erase exit 
+                fc find findstr for format ftype 
+                goto graftabl 
+                help 
+                if 
+                label 
+                md mkdir mode more move 
+                path pause popd print prompt pushd 
+                rd recover ren rename replace rmdir 
+                set setlocal shift sort start subst 
+                time title tree type 
+                ver verify vol 
+                xcopy 
+            </keywords>
+            <keywords style="batch-op" ignoreCase="true">
+                not exist
+            </keywords>
+        </painter>
+
+        <painter id="PythonPainter" displayName="Python" for="py">
+            <regex pattern="#.*$" options="gm" style="comment" />
+            <regex pattern="^\s*@\w+" options="gm" style="py-decorator" />
+            <regex pattern="[ru]?(['&quot;]{3})([^\1])*?\1" options="gm" style="doc-string" />
+            <regex pattern="[ru]?(['&quot;])(?!\1)(.|[\\\1])+?\1" options="gm" style="string" />
+            <regex pattern="\b[0-9]+\.?\w*" options="g" style="number" />
+            <keywords style="keyword">
+                and assert break class continue def del elif else
+                except exec finally for from global if import in is
+                lambda not or pass print raise return try yield while
+            </keywords>
+            <keywords style="py-special">
+                None True False self cls class_
+            </keywords>
+        </painter>
+
+    </painters>
+
+</configuration>
