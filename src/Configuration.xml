@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <!-- License
 
 The zlib/libpng License
@@ -24,9 +24,9 @@ freely, subject to the following restrictions:
 
 -->
 <configuration>
-    
+
     <styles>
-    
+
         <style id="comment" foreColor="Green" />
         <style id="keyword" foreColor="Cyan" />
         <style id="string" foreColor="Magenta" />
@@ -38,7 +38,7 @@ freely, subject to the following restrictions:
         <style id="sql-string" foreColor="Red" />
         <style id="sql-comment" foreColor="DarkGray" />
         <style id="sql-op" foreColor="Yellow" />
-        
+
         <style id="xml-attribute" foreColor="Yellow" />
         <style id="xml-attribute-value" foreColor="Cyan" />
         <style id="xml-tag" foreColor="Magenta" />
@@ -51,7 +51,7 @@ freely, subject to the following restrictions:
 
         <style id="py-special" foreColor="Yellow" />
         <style id="py-decorator" foreColor="Yellow" />
-               
+
     </styles>
 
     <painters>
@@ -146,30 +146,30 @@ freely, subject to the following restrictions:
                 Variant When While With WithEvents WriteOnly Xor
             </keywords>
         </painter>
-        
+
         <painter id="XmlPainter" displayName="HTML/XML" for="html htm xml xhtml xslt xsl" type="Hilite.XmlPainter, Hilite" />
-        
+
         <painter id="BatchPainter" displayName="Batch" for="bat cmd">
             <regex pattern="^\s*rem\b.*" options="gmi" style="comment" />
             <regex pattern="%\w+%" options="g" style="batch-variable" />
             <keywords style="keyword" ignoreCase="true">
-                assoc at attrib 
-                break 
-                cacls call cd chcp chdir chkdsk chkntfs cls cmd color comp compact convert copy 
-                date del dir diskcomp diskcopy doskey 
-                echo endlocal erase exit 
-                fc find findstr for format ftype 
-                goto graftabl 
-                help 
-                if 
-                label 
-                md mkdir mode more move 
-                path pause popd print prompt pushd 
-                rd recover ren rename replace rmdir 
-                set setlocal shift sort start subst 
-                time title tree type 
-                ver verify vol 
-                xcopy 
+                assoc at attrib
+                break
+                cacls call cd chcp chdir chkdsk chkntfs cls cmd color comp compact convert copy
+                date del dir diskcomp diskcopy doskey
+                echo endlocal erase exit
+                fc find findstr for format ftype
+                goto graftabl
+                help
+                if
+                label
+                md mkdir mode more move
+                path pause popd print prompt pushd
+                rd recover ren rename replace rmdir
+                set setlocal shift sort start subst
+                time title tree type
+                ver verify vol
+                xcopy
             </keywords>
             <keywords style="batch-op" ignoreCase="true">
                 not exist

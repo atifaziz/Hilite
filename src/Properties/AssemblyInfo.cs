@@ -1,20 +1,20 @@
-﻿#region License
+#region License
 
 //
 // The zlib/libpng License
 // Copyright (c) 2006 Atif Aziz, Skybow AG.
 //
-// This software is provided 'as-is', without any express or implied 
+// This software is provided 'as-is', without any express or implied
 // warranty. In no event will the authors be held liable for any damages
 // arising from the use of this software.
 //
-// Permission is granted to anyone to use this software for any purpose, 
+// Permission is granted to anyone to use this software for any purpose,
 // including commercial applications, and to alter it and redistribute it
 // freely, subject to the following restrictions:
 //
-// 1. The origin of this software must not be misrepresented; you must not 
+// 1. The origin of this software must not be misrepresented; you must not
 //    claim that you wrote the original software. If you use this software in
-//    a product, an acknowledgment in the product documentation would be 
+//    a product, an acknowledgment in the product documentation would be
 //    appreciated but is not required.
 //
 // 2. Altered source versions must be plainly marked as such, and must not be
@@ -30,7 +30,7 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 
 //
-// General Information about the assembly is controlled through the following 
+// General Information about the assembly is controlled through the following
 // set of attributes.
 //
 
@@ -49,15 +49,15 @@ using System.Runtime.InteropServices;
 #endif
 
 //
-// Setting ComVisible to false makes the types in this assembly not visible 
-// to COM components.  If you need to access a type in this assembly from 
+// Setting ComVisible to false makes the types in this assembly not visible
+// to COM components.  If you need to access a type in this assembly from
 // COM, set the ComVisible attribute to true on that type.
 //
 
 [assembly: ComVisible(false)]
 
 //
-// Compliant with the Common Language Specification (CLS). 
+// Compliant with the Common Language Specification (CLS).
 //
 
 [assembly: CLSCompliant(true)]
@@ -66,7 +66,7 @@ using System.Runtime.InteropServices;
 // Version information for an assembly consists of the following four values:
 //
 //      Major Version
-//      Minor Version 
+//      Minor Version
 //      Build Number
 //      Revision
 //
